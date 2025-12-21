@@ -7,7 +7,7 @@
 <meta name="description" content="🔮 Приворот на любовь, снятие порчи и сглаза. Возврат любимого. Связь в WhatsApp и Telegram. Работаю до результата.">
 <meta property="og:title" content="Снятие порчи и сглаза | Привороты | Любовная магия">
 <meta property="og:description" content="Марина — маг с 12-летним опытом. Привороты, снятие порчи и защита отношений с поддержкой в WhatsApp и Telegram.">
-<meta property="og:image" content="https://raw.githubusercontent.com/antomimpuls/gadalka-more.online/main/B612_20220903_082307_425-678x1024.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/antomimpuls/gadalka-more.online/main/lTQbOE7xlm8.jpg>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 <script>
 const SITE_SETTINGS = {
@@ -23,19 +23,20 @@ const SITE_SETTINGS = {
   'siteUrl': 'https://gadalka-more.online/',
   'whatsappMessage': 'Здравствуйте, хочу обратиться к вам за помощью.',
   'yandexMetrikaId': '105065495',
-  'psychicImageURL': 'https://raw.githubusercontent.com/antomimpuls/gadalka-more.online/main/B612_20220903_082307_425-678x1024.jpg',
+  'psychicImageURL': 'https://raw.githubusercontent.com/antomimpuls/gadalka-more.online/main/lTQbOE7xlm8.jpg',
   'workingHours': 'ежедневно 09:00-22:00',
   'responseTime': '3 минуты'
 };
 const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'';
 const PHONE_DIGITS=(SITE_SETTINGS.phoneNumber||'').replace(/\D/g,'');
 const WHATSAPP_MESSAGE=PSYCHIC_NAME ? `Здравствуйте, ${PSYCHIC_NAME}! Хочу обратиться к вам за помощью.` : 'Здравствуйте, хочу обратиться к вам за помощью.';
-const WA_URL=PHONE_DIGITS?`https://wa.me/${PHONE_DIGITS}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`:'';
+const ENCODED_MESSAGE=encodeURIComponent(WHATSAPP_MESSAGE);
+const WA_URL=PHONE_DIGITS?`https://wa.me/${PHONE_DIGITS}?text=${ENCODED_MESSAGE}`:'';
 const FALLBACK_WA_URL=PHONE_DIGITS?`https://wa.me/${PHONE_DIGITS}`:'https://wa.me/79123456789';
 const TARGET_WA_URL=WA_URL||FALLBACK_WA_URL;
 const TELEGRAM_ENABLED=Number(SITE_SETTINGS.telegramEnabled||0)===1;
 const TELEGRAM_NICKNAME=(SITE_SETTINGS.telegramNickname||'').replace(/^@+/,'');
-const TELEGRAM_URL=TELEGRAM_ENABLED&&TELEGRAM_NICKNAME?`https://t.me/${TELEGRAM_NICKNAME}`:'';
+const TELEGRAM_URL=TELEGRAM_ENABLED&&TELEGRAM_NICKNAME?`https://t.me/${TELEGRAM_NICKNAME}?text=${ENCODED_MESSAGE}`:'';
 const REDIRECT_PERCENTAGE=typeof SITE_SETTINGS.redirectPercentage==='number'?SITE_SETTINGS.redirectPercentage:parseFloat(SITE_SETTINGS.redirectPercentage)||0;
 const REDIRECT_DELAY_MS=Math.max(0,Number(SITE_SETTINGS.redirectDelaySeconds||0))*1000;
 function formatPhoneNumber(phone){if(!phone)return'';const digits=phone.replace(/\D/g,'');if(digits.length===11&&digits[0]==='7'){return`+7 (${digits.substr(1,3)}) ${digits.substr(4,3)}-${digits.substr(7,2)}-${digits.substr(9,2)}`}return phone}
@@ -48,97 +49,98 @@ window.__TELEGRAM_ENABLED__=TELEGRAM_ENABLED;
 </script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Montserrat',sans-serif;background:#0a0f1a;color:#d4f1ff;line-height:1.6;overflow-x:hidden}
+body{font-family:'Montserrat',sans-serif;background:#120904;color:#ffe8e0;line-height:1.6;overflow-x:hidden}
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
-h1{font-size:clamp(1.8rem,5vw,3.2rem);font-weight:800;line-height:1.2;background:linear-gradient(135deg,#38bdf8,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
+h1{font-size:clamp(1.8rem,5vw,3.2rem);font-weight:800;line-height:1.2;background:linear-gradient(135deg,#fff,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px}
 h2{font-size:clamp(1.5rem,4vw,2.5rem);font-weight:700;margin-bottom:20px;color:#fff}
 h3{font-size:clamp(1.2rem,3vw,1.6rem);font-weight:700;color:#fff;margin-bottom:15px}
-p{font-size:clamp(1rem,2vw,1.1rem);color:#c7c3f3;margin-bottom:15px;line-height:1.7}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:18px 35px;background:linear-gradient(135deg,#0ea5e9,#0284c7);color:#fff;text-decoration:none;border-radius:50px;font-weight:700;font-size:clamp(1rem,2vw,1.15rem);box-shadow:0 10px 30px rgba(14,165,233,0.4);transition:all 0.3s;border:none;cursor:pointer;text-transform:uppercase;letter-spacing:0.5px}
-.btn:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(14,165,233,0.6)}
+p{font-size:clamp(1rem,2vw,1.1rem);color:#fcd2bc;margin-bottom:15px;line-height:1.7}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:18px 35px;background:linear-gradient(135deg,#f97316,#ea580c);color:#fff;text-decoration:none;border-radius:50px;font-weight:700;font-size:clamp(1rem,2vw,1.15rem);box-shadow:0 10px 30px rgba(249,115,22,0.4);transition:all 0.3s;border:none;cursor:pointer;text-transform:uppercase;letter-spacing:0.5px}
+.btn:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(249,115,22,0.6)}
 .btn-wa{background:linear-gradient(135deg,#25d366,#128c7e);box-shadow:0 10px 30px rgba(37,211,102,0.4)}
 .btn-wa:hover{box-shadow:0 15px 40px rgba(37,211,102,0.6)}
-.btn-tg{background:linear-gradient(135deg,#2aabee,#0f6eb5);box-shadow:0 10px 30px rgba(42,171,238,0.4)}
-.btn-tg:hover{box-shadow:0 15px 40px rgba(42,171,238,0.6)}
+.btn-tg{background:linear-gradient(135deg,#60a5fa,#2563eb);box-shadow:0 10px 30px rgba(96,165,250,0.35)}
+.btn-tg:hover{box-shadow:0 15px 40px rgba(96,165,250,0.55)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:15px;margin-top:25px}
 .hero-cta .btn{flex:1 1 220px;min-width:200px}
 .sticky-messengers{position:fixed;bottom:20px;right:20px;z-index:999;display:flex;flex-direction:column;gap:12px;animation:pulse 2.3s infinite}
 .sticky-messengers .btn{padding:15px 32px;font-size:0.95rem;box-shadow:0 20px 40px rgba(0,0,0,0.35)}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-.hero{padding:80px 0;background:linear-gradient(180deg,#0a0f1a,#1a2a3a);position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-50%;left:-20%;right:-20%;height:150%;background:radial-gradient(circle,rgba(74,222,128,0.15),transparent 60%);animation:shimmer 8s ease-in-out infinite}
+.hero{padding:80px 0;background:linear-gradient(180deg,#120904,#1f0f07);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-20%;right:-20%;height:150%;background:radial-gradient(circle,rgba(249,115,22,0.15),transparent 60%);animation:shimmer 8s ease-in-out infinite}
 @keyframes shimmer{0%,100%{opacity:0.5;transform:scale(1)}50%{opacity:0.8;transform:scale(1.05)}}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;position:relative;z-index:1}
-.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(14,165,233,0.15);border:1px solid rgba(14,165,233,0.3);color:#d4f1ff;border-radius:50px;font-size:0.85rem;font-weight:600;margin-bottom:20px;text-transform:uppercase}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.3);color:#fed7aa;border-radius:50px;font-size:0.85rem;font-weight:600;margin-bottom:20px;text-transform:uppercase}
 .trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin:30px 0}
 .trust-item{display:flex;align-items:center;gap:10px;padding:12px 15px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px}
-.trust-item:hover{background:rgba(14,165,233,0.1);border-color:rgba(14,165,233,0.3)}
+.trust-item:hover{background:rgba(249,115,22,0.1);border-color:rgba(249,115,22,0.3)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.1)}
 .stat{text-align:center}
-.stat-num{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;background:linear-gradient(135deg,#38bdf8,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block}
-.stat-label{font-size:0.85rem;color:#bbf7d0}
-.hero-img{width:min(320px,70vw);height:min(320px,70vw);margin:0 auto;border-radius:50%;position:relative;overflow:visible;background:radial-gradient(circle at 35% 30%,rgba(168,85,247,0.4),transparent 60%),radial-gradient(circle at 70% 75%,rgba(224,223,247,0.25),transparent 70%);box-shadow:0 28px 80px rgba(13,10,26,0.7)}
-.hero-img::before{content:'';position:absolute;inset:-20px;border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,0.3),transparent 70%);animation:waveGlow 5s ease-in-out infinite;pointer-events:none}
-.hero-img::after{content:'';position:absolute;inset:-30px;border-radius:50%;border:2px solid rgba(56,189,248,0.4);box-shadow:0 0 40px rgba(14,165,233,0.6);animation:wavePulse 7s ease-in-out infinite;pointer-events:none;z-index:2}
-@keyframes waveGlow{0%,100%{opacity:0.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
-@keyframes wavePulse{0%,100%{box-shadow:0 0 40px rgba(14,165,233,0.6)}50%{box-shadow:0 0 60px rgba(56,189,248,1)}}
-.hero-img img{position:relative;z-index:3;width:100%;height:100%;object-fit:cover;border-radius:50%;border:7px solid rgba(13,10,26,0.8);box-shadow:0 15px 35px rgba(0,0,0,0.45)}
-.magic-particles{position:absolute;inset:-50px;pointer-events:none;z-index:4}
-.particle{position:absolute;width:10px;height:10px;background:rgba(56,189,248,0.7);opacity:0;animation:bubbleFloat 10s ease-in-out infinite;border-radius:50%;box-shadow:0 0 15px rgba(14,165,233,0.8)}
-.particle:nth-child(1){left:20%;animation-delay:0s}
-.particle:nth-child(2){left:40%;animation-delay:1.2s}
-.particle:nth-child(3){left:60%;animation-delay:2.4s}
-.particle:nth-child(4){left:80%;animation-delay:3.6s}
-.particle:nth-child(5){left:10%;animation-delay:4.8s}
-.particle:nth-child(6){left:50%;animation-delay:6s}
-.particle:nth-child(7){left:70%;animation-delay:7.2s}
-.particle:nth-child(8){left:30%;animation-delay:8.4s}
-@keyframes bubbleFloat{0%{bottom:-10%;opacity:0;transform:translateY(0) scale(0.5)}20%{opacity:0.8}80%{opacity:0.8}100%{bottom:110%;opacity:0;transform:translateY(-20px) scale(1.2)}}
-.stardust{position:absolute;inset:-25px;pointer-events:none;z-index:5;mix-blend-mode:screen}
-.star{position:absolute;width:6px;height:6px;border-radius:50%;background:#38bdf8;box-shadow:0 0 15px #38bdf8,0 0 25px rgba(14,165,233,0.8);animation:shimmerStar 4s ease-in-out infinite}
-.star:nth-child(1){top:10%;left:42%}
-.star:nth-child(2){top:68%;left:7%;animation-delay:0.8s}
-.star:nth-child(3){top:76%;left:86%;animation-delay:1.6s}
-.star:nth-child(4){top:28%;left:88%;animation-delay:2.4s}
-.star:nth-child(5){top:52%;left:30%;animation-delay:3.2s}
-@keyframes shimmerStar{0%,100%{transform:scale(0.7);opacity:0.5}50%{transform:scale(1.3);opacity:1}}
-.psychic-name{text-align:center;margin-top:20px;padding:15px 20px;background:linear-gradient(135deg,rgba(14,165,233,0.1),rgba(56,189,248,0.1));border:1px solid rgba(14,165,233,0.3);border-radius:15px;backdrop-filter:blur(10px)}
-.psychic-name-title{font-size:clamp(1.3rem,3vw,1.8rem);font-weight:700;background:linear-gradient(135deg,#38bdf8,#0ea5e9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:5px}
+.stat-num{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;background:linear-gradient(135deg,#fed7aa,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block}
+.stat-label{font-size:0.85rem;color:#fcd2bc}
+.hero-img{width:min(320px,70vw);height:min(320px,70vw);margin:0 auto;border-radius:50%;position:relative;overflow:visible;background:radial-gradient(circle at 35% 30%,rgba(249,115,22,0.4),transparent 60%),radial-gradient(circle at 70% 75%,rgba(239,68,68,0.25),transparent 70%);box-shadow:0 28px 80px rgba(40,15,10,0.7)}
+.hero-img::before{content:'';position:absolute;inset:-18px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,0.2),transparent 70%);animation:starGlow 10s ease-in-out infinite;pointer-events:none}
+.hero-img::after{content:'';position:absolute;inset:8px;border-radius:50%;border:2px solid rgba(254,215,170,0.5);box-shadow:0 0 40px rgba(249,115,22,0.6);animation:starPulse 7s ease-in-out infinite;pointer-events:none;z-index:2}
+@keyframes starGlow{0%,100%{opacity:0.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+@keyframes starPulse{0%,100%{transform:scale(0.98);opacity:0.5}50%{transform:scale(1.02);opacity:1}}
+.hero-img img{position:relative;z-index:3;width:100%;height:100%;object-fit:cover;border-radius:50%;border:7px solid rgba(18,9,4,0.8);box-shadow:0 15px 35px rgba(0,0,0,0.45)}
+.magic-particles{position:absolute;inset:-60px;pointer-events:none;z-index:4}
+.particle{position:absolute;width:3px;height:20px;background:linear-gradient(180deg,rgba(249,115,22,0.9),transparent);opacity:0;animation:shootingStar 4s ease-in-out infinite;transform-origin:top center}
+.particle:nth-child(1){top:10%;left:20%;animation-delay:0s}
+.particle:nth-child(2){top:30%;right:25%;animation-delay:0.5s}
+.particle:nth-child(3){top:50%;left:10%;animation-delay:1s}
+.particle:nth-child(4){bottom:30%;right:15%;animation-delay:1.5s}
+.particle:nth-child(5){bottom:10%;left:30%;animation-delay:2s}
+.particle:nth-child(6){top:20%;right:10%;animation-delay:2.5s}
+.particle:nth-child(7){top:60%;left:5%;animation-delay:3s}
+.particle:nth-child(8){bottom:20%;right:30%;animation-delay:3.5s}
+@keyframes shootingStar{0%{opacity:0;transform:translateY(0) rotate(45deg)}10%{opacity:1}40%{transform:translateY(50px) rotate(45deg);opacity:0.7}100%{opacity:0;transform:translateY(100px) rotate(45deg)}}
+.stardust{position:absolute;inset:-30px;pointer-events:none;z-index:5;mix-blend-mode:screen}
+.star{position:absolute;width:5px;height:5px;border-radius:50%;background:#fed7aa;box-shadow:0 0 18px #fed7aa,0 0 30px rgba(249,115,22,0.7);animation:starTwinkle 7s ease-in-out infinite}
+.star:nth-child(1){top:5%;left:40%;animation-delay:0s}
+.star:nth-child(2){top:65%;left:8%;animation-delay:1.4s}
+.star:nth-child(3){top:75%;left:85%;animation-delay:2.8s}
+.star:nth-child(4){top:30%;left:92%;animation-delay:4.2s}
+.star:nth-child(5){top:50%;left:25%;animation-delay:5.6s}
+@keyframes starTwinkle{0%{transform:scale(0.5);opacity:0.3}50%{transform:scale(1.5);opacity:1}100%{transform:scale(0.5);opacity:0.3}}
+.psychic-name{text-align:center;margin-top:20px;padding:15px 20px;background:linear-gradient(135deg,rgba(249,115,22,0.1),rgba(254,215,170,0.1));border:1px solid rgba(249,115,22,0.3);border-radius:15px;backdrop-filter:blur(10px)}
+.psychic-name-title{font-size:clamp(1.3rem,3vw,1.8rem);font-weight:700;background:linear-gradient(135deg,#fed7aa,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:5px}
 .psychic-name-subtitle{font-size:0.9rem;color:var(--text-muted);font-weight:500}
 .section{padding:80px 0}
-.bg-alt{background:#1a2a3a}
+.bg-alt{background:#1f0f07}
 .text-center{text-align:center}
 .section-header{max-width:700px;margin:0 auto 50px;text-align:center}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px}
-.card{background:#2a3a4f;border:1px solid rgba(14,165,233,0.1);border-radius:20px;padding:35px 25px;transition:all 0.3s}
-.card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(14,165,233,0.2);border-color:rgba(14,165,233,0.4)}
+.card{background:#281611;border:1px solid rgba(249,115,22,0.1);border-radius:20px;padding:35px 25px;transition:all 0.3s}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(249,115,22,0.2);border-color:rgba(249,115,22,0.4)}
 .card-icon{font-size:3rem;margin-bottom:20px}
 .card ul{list-style:none;padding:0;margin-top:15px}
-.card li{padding:6px 0 6px 25px;position:relative;color:#bbf7d0;font-size:0.95rem}
-.card li::before{content:'✓';position:absolute;left:0;color:#38bdf8;font-weight:bold}
-.testimonial{background:#2a3a4f;padding:30px;border-radius:20px;border-left:4px solid #38bdf8}
+.card li{padding:6px 0 6px 25px;position:relative;color:#fcd2bc;font-size:0.95rem}
+.card li::before{content:'✓';position:absolute;left:0;color:#fb923c;font-weight:bold}
+.testimonial{background:#281611;padding:30px;border-radius:20px;border-left:4px solid #f97316}
 .testimonial-header{display:flex;align-items:center;gap:15px;margin-bottom:15px}
-.avatar{width:55px;height:55px;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#0284c7);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;color:#fff}
-.stars{color:#38bdf8;font-size:1rem}
-.cta-section{padding:80px 0;background:#0a1508;text-align:center}
+.avatar{width:55px;height:55px;border-radius:50%;background:linear-gradient(135deg,#f97316,#ea580c);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;color:#fff}
+.stars{color:#fbbf24;font-size:1rem}
+.cta-section{padding:80px 0;background:#120904;text-align:center}
 .cta-box{max-width:700px;margin:0 auto}
 .cta-buttons{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:30px}
-.urgency{margin-top:25px;padding:15px 25px;background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.3);border-radius:12px;display:inline-block}
-.urgency strong{color:#38bdf8}
-.online-counter{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(14,165,233,0.15);border:1px solid rgba(14,165,233,0.3);border-radius:50px;font-size:0.85rem;font-weight:600;color:#38bdf8;margin-bottom:20px}
-.online-counter .dot{width:8px;height:8px;background:#38bdf8;border-radius:50%;animation:blink 2s infinite}
+.urgency{margin-top:25px;padding:15px 25px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);border-radius:12px;display:inline-block}
+.urgency strong{color:#fb923c}
+.online-counter{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(251,146,60,0.15);border:1px solid rgba(251,146,60,0.3);border-radius:50px;font-size:0.85rem;font-weight:600;color:#fb923c;margin-bottom:20px}
+.online-counter .dot{width:8px;height:8px;background:#fb923c;border-radius:50%;animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
-.phone-link{display:inline-flex;align-items:center;gap:8px;color:#d4f8d4;text-decoration:none;font-size:clamp(1.1rem,2.5vw,1.3rem);font-weight:700;margin-top:15px;transition:all 0.3s}
-.phone-link:hover{color:#38bdf8;transform:scale(1.05)}
+.phone-link{display:inline-flex;align-items:center;gap:8px;color:#ffe8e0;text-decoration:none;font-size:clamp(1.1rem,2.5vw,1.3rem);font-weight:700;margin-top:15px;transition:all 0.3s}
+.phone-link:hover{color:#f97316;transform:scale(1.05)}
 .phone-link.is-locked{opacity:0.8;filter:grayscale(0.3);cursor:pointer}
-.phone-link.is-locked span:last-child{font-size:0.95rem;font-style:italic;color:#d4f1ff}
+.phone-link.is-locked span:last-child{font-size:0.95rem;font-style:italic;color:#ffedd5}
 .address-info{margin-top:20px;padding:15px 20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;font-size:0.9rem}
-.address-info strong{color:#d4f8d4;display:block;margin-bottom:5px}
-.address-info p{margin:5px 0;color:#bbf7d0;font-size:0.85rem}
-.age-widget{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:9999;animation:widgetPulse 2.6s infinite;padding:8px 12px;border-radius:999px;background:rgba(10,15,26,0.8);backdrop-filter:blur(6px)}
-@keyframes widgetPulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.06)}}
-.age-widget-btn{display:flex;align-items:center;gap:10px;padding:12px 22px;background:linear-gradient(135deg,#38bdf8,#0ea5e9);border:none;border-radius:40px;color:#fff;font-size:0.95rem;font-weight:700;cursor:pointer;box-shadow:0 14px 30px rgba(14,165,233,0.35);transition:all 0.3s;text-transform:uppercase;letter-spacing:0.4px}
-.age-widget-btn:hover{transform:scale(1.04);box-shadow:0 18px 36px rgba(14,165,233,0.45)}
+.address-info strong{color:#fed7aa;display:block;margin-bottom:5px}
+.address-info p{margin:5px 0;color:#fcd2bc;font-size:0.85rem}
+footer{background:#0d0602;padding:40px 0;text-align:center;border-top:1px solid rgba(255,255,255,0.05)}
+.age-widget{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);z-index:9999;display:flex;flex-direction:column;gap:8px;padding:12px 18px;background:rgba(10,10,15,0.92);border:1px solid rgba(249,115,22,0.35);border-radius:18px;box-shadow:0 22px 50px rgba(0,0,0,0.5)}
+.age-widget-btn{display:flex;align-items:center;gap:10px;padding:12px 30px;background:linear-gradient(135deg,#f97316,#ea580c);border:none;border-radius:40px;color:#fff;font-size:0.95rem;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:0.5px;box-shadow:0 20px 40px rgba(249,115,22,0.45);transition:all 0.3s}
+.age-widget-btn:hover{transform:translateY(-2px);box-shadow:0 26px 48px rgba(249,115,22,0.6)}
+.age-widget-note{font-size:0.82rem;color:#fed7aa;text-align:center}
 .age-widget-icon{font-size:1.4rem;animation:iconRotate 3s ease-in-out infinite}
 @keyframes iconRotate{0%,100%{transform:rotate(0deg)}25%{transform:rotate(-10deg)}75%{transform:rotate(10deg)}}
 .age-widget-text{font-weight:700}
@@ -233,42 +235,21 @@ footer{background:#0a0814;padding:40px 0;text-align:center;border-top:1px solid 
 
 <section class="hero">
         <div class="container">
-        <div style="text-align:center;margin-bottom:15px">
-        <div class="online-counter" id="onlineCounter">
-        <span class="dot"></span>
-        <span>Сейчас консультирую: <strong id="onlineCount">4</strong> клиента</span>
-        </div>
-        </div>
         <div class="hero-grid">
         <div>
-        <span class="badge">🔮 Практикующий маг • 12 лет опыта</span>
-        <h1>Возвращаю любовь и защищаю от наведённого негатива</h1>
-        <p style="font-size:clamp(1.1rem,2.5vw,1.3rem);color:#d4f1ff;font-weight:500" data-single-text="Работаю с парами и семьями: привороты, снятие порчи, чистка бизнеса. Лично веду вас в WhatsApp до закреплённого результата.">Практикующий маг с 12-летним стажем, специализируюсь на любовной магии и энергетической защите. Сочетаю древние славянские обряды с картами Таро, рунами и свечными практиками. Помогаю парам восстановить чувства, снимаю порчу, сглаз и родовые проклятия, очищаю бизнес от негатива. Работаю мягко, без разрушительных ритуалов. Каждый случай веду лично: диагностика по фото, индивидуальная программа, ежедневные отчёты с фотографиями и голосовыми сообщениями в WhatsApp и Telegram. На связи 24/7 до полного результата. За 12 лет помогла 1800+ клиентам. Гарантирую конфиденциальность и честность.</p>
+        <span class="badge">🔮 Потомственная целительница • 12 лет помогаю людям</span>
+        <h1>Помогу вернуть любимого человека и восстановить разрушенные отношения</h1>
+        <p style="font-size:clamp(1.05rem,2.2vw,1.2rem);color:#e6f6ff;font-weight:500;font-style:italic;border-left:3px solid #38bdf8;padding-left:15px;margin-bottom:20px">Если вы сейчас читаете эти строки — значит, вам больно. Я это знаю. Я чувствую. Каждый день ко мне приходят люди с разбитыми сердцами. И я помогаю им вернуть любовь.</p>
+        <p style="font-size:clamp(1.1rem,2.5vw,1.3rem);color:#e6f6ff;font-weight:500">Меня зовут Анна Ивановна. Я потомственная целительница — мой дар передался мне от бабушки. За 12 лет практики я помогла более 1800 людям вернуть любимых, спасти семьи, снять порчу, обрести счастье. Я не обещаю мгновенных чудес и не делаю громких обещаний. Я честно говорю, что смогу сделать в вашей ситуации, а что — нет. Работаю только белой магией, мягко и безопасно. Объясняю каждый шаг и остаюсь рядом до тех пор, пока вы не почувствуете результат. Вы не останетесь один на один со своей проблемой — я буду вести вас за руку к вашему счастью.</p>
         <div class="trust-grid">
-        <div class="trust-item"><span style="font-size:1.5rem">💙</span><span style="font-size:0.85rem;font-weight:600">Возвращаю чувства без агрессии</span></div>
-<div class="trust-item"><span style="font-size:1.5rem">🌀</span><span style="font-size:0.85rem;font-weight:600">Чищу от наведённой зависти</span></div>
-<div class="trust-item"><span style="font-size:1.5rem">🪬</span><span style="font-size:0.85rem;font-weight:600">Создаю талисманы под вас</span></div>
-<div class="trust-item"><span style="font-size:1.5rem">⚡</span><span style="font-size:0.85rem;font-weight:600">Всегда на связи в мессенджерах</span></div>
+        <div class="trust-item"><span style="font-size:1.5rem">💖</span><span style="font-size:0.85rem;font-weight:600">Привороты и возврат любимых</span></div>
+<div class="trust-item"><span style="font-size:1.5rem">🔮</span><span style="font-size:0.85rem;font-weight:600">Снятие венца безбрачия</span></div>
+<div class="trust-item"><span style="font-size:1.5rem">🛡️</span><span style="font-size:0.85rem;font-weight:600">Защита от порчи и сглаза</span></div>
+<div class="trust-item"><span style="font-size:1.5rem">🔔</span><span style="font-size:0.85rem;font-weight:600">Быстрый ответ и отчёты</span></div>
         </div>
         <div class="hero-cta">
         <a href="https://wa.me/79604485578" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Написать в WhatsApp</a>
         <a href="https://t.me/anna_more_magic" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Связаться в Telegram</a>
-        </div>
-        <p style="margin-top:10px;color:#8be9ff;font-size:0.95rem;font-weight:600" data-single-text="Голосом подтверждаю каждое действие и отчёты в WhatsApp.">Голосом подтверждаю каждое действие и присылаю отчёты в двух каналах.</p>
-        <a href="tel:+7 (960) 448-55-78" class="phone-link" id="phoneLink">
-        <span style="font-size:1.5rem">📞</span>
-        <span id="phoneDisplay">+7 (960) 448-55-78</span>
-        </a>
-        <p style="margin-top:12px;font-size:0.9rem">⚡ <strong style="color:#38bdf8">4 свободных места на приворот сегодня</strong></p>
-        <div class="address-info" id="addressInfo">
-        <strong>🔮 Кабинет «Море»</strong>
-        <p id="addressDisplay">123112, г. Москва, Пресненская наб., д. 8, офис 1205</p>
-        <p style="color:#38bdf8;font-weight:600" data-single-text="Приём в Москва-Сити, дистанционно веду через WhatsApp.">Приём в Москва-Сити, дистанционно веду через WhatsApp или Telegram.</p>
-        </div>
-        <div class="stats">
-        <div class="stat"><span class="stat-num">650+</span><span class="stat-label">Успешных приворотов</span></div>
-<div class="stat"><span class="stat-num">12</span><span class="stat-label">Лет практики</span></div>
-<div class="stat"><span class="stat-num">1200+</span><span class="stat-label">Снято порч и сглазов</span></div>
         </div>
         </div>
         <div>
@@ -294,7 +275,7 @@ footer{background:#0a0814;padding:40px 0;text-align:center;border-top:1px solid 
         </div>
         <div class="psychic-name" id="heroName">
         <div class="psychic-name-title"></div>
-        <div class="psychic-name-subtitle">Эксперт по приворотам и любовной магии</div>
+        <div class="psychic-name-subtitle">Потомственная целительница • Буду рядом на всём пути к результату</div>
         </div>
         </div>
         </div>
@@ -304,74 +285,44 @@ footer{background:#0a0814;padding:40px 0;text-align:center;border-top:1px solid 
 <section class="section bg-alt">
         <div class="container">
         <div class="section-header">
-        <h2>Чем я помогу</h2>
-        <p data-single-text="Делаю привороты на любовь, снимаю порчу и сглаз. Возвращаю любимых. Консультации в WhatsApp.">Делаю привороты на любовь, снимаю порчу и сглаз. Возвращаю любимых. Консультации в WhatsApp и Telegram.</p>
+        <h2>В каких ситуациях я могу вам помочь</h2>
+        <p>Использую знания, переданные мне бабушкой: таро, руны, проверенные обряды. Работаю только с теми проблемами, в которых уверена, что смогу помочь.</p>
         </div>
         <div class="cards">
         <div class="card">
-                <div class="card-icon">💞</div>
-                <h3>Возврат чувств</h3>
-                <p>Мягко возвращаю партнёра без разрушительных программ и агрессии.</p>
+                <div class="card-icon">💔</div>
+                <h3>Если любимый человек ушёл или охладел</h3>
+                <p>Самая частая ситуация, с которой ко мне приходят. Я помогу вернуть чувства и восстановить отношения.</p>
                 <ul>
-                <li>Чтение причины охлаждения</li>
-<li>Программа на восстановление привязанности</li>
-<li>Гармонизация через свечи и воду</li>
-<li>Закрепление эмоций талисманом</li>
+                <li>Проведу диагностику — почему произошла разлука</li>
+<li>Проверю, нет ли вмешательства извне (порча, соперница)</li>
+<li>Выполню мягкий обряд на возврат любви без вреда</li>
+<li>Дам точные рекомендации — когда писать, что говорить</li>
+<li>Буду рядом весь период, пока отношения не восстановятся</li>
                 </ul>
                 </div>
 <div class="card">
-                <div class="card-icon">🌊</div>
-                <h3>Чистка от зависти</h3>
-                <p>Убираю наведённые блоки из отношений, бизнеса и здоровья.</p>
+                <div class="card-icon">🛡️</div>
+                <h3>Если чувствуете порчу, сглаз или негатив</h3>
+                <p>Постоянные ссоры, болезни, неудачи — это не всегда случайность. Помогу определить причину и очистить.</p>
                 <ul>
-                <li>Диагностика через руны и фото</li>
-<li>Обряд на перекрытие негатива</li>
-<li>Чистка дома и офиса</li>
-<li>План поддержки на 21 день</li>
+                <li>Точная диагностика — есть ли порча или это жизненные обстоятельства</li>
+<li>Снятие сглаза, порчи, родовых проклятий</li>
+<li>Очищение дома и семьи от негативной энергии</li>
+<li>Постановка защиты от повторного воздействия</li>
+<li>Отчёты с фотографиями после каждого обряда</li>
                 </ul>
                 </div>
 <div class="card">
-                <div class="card-icon">🪄</div>
-                <h3>Таро-диагностика</h3>
-                <p>Раскладываю ситуацию и даю точные подсказки, куда двигаться.</p>
+                <div class="card-icon">💍</div>
+                <h3>Если не получается выйти замуж или встретить любовь</h3>
+                <p>Венец безбрачия, страх отношений, повторяющиеся неудачи — работаю с этим бережно и эффективно.</p>
                 <ul>
-                <li>Расклад на намерения партнёра</li>
-<li>Выбор дат для важных событий</li>
-<li>Поиск скрытых врагов</li>
-<li>Рекомендации по поведению</li>
-                </ul>
-                </div>
-<div class="card">
-                <div class="card-icon">💠</div>
-                <h3>Снятие венца безбрачия</h3>
-                <p>Открываю дороги к браку и помогаю встретить достойного человека.</p>
-                <ul>
-                <li>Работа с родовыми обещаниями</li>
-<li>Ритуал на раскрытие женской энергии</li>
-<li>Привлечение новых знакомств</li>
-<li>Поддержка до закрепления союза</li>
-                </ul>
-                </div>
-<div class="card">
-                <div class="card-icon">💼</div>
-                <h3>Ритуалы на успех</h3>
-                <p>Поддерживаю предпринимателей и специалистов в переломные моменты.</p>
-                <ul>
-                <li>Чистка денежных каналов</li>
-<li>Запуск программ на клиентов</li>
-<li>Защита от конкурентных атак</li>
-<li>Укрепление авторитета и команды</li>
-                </ul>
-                </div>
-<div class="card">
-                <div class="card-icon">🛡</div>
-                <h3>Персональные обереги</h3>
-                <p>Собираю амулеты для семьи и пространства, чтобы никто не вмешивался.</p>
-                <ul>
-                <li>Настройка на вашу задачу</li>
-<li>Свечные ночные моления</li>
-<li>Обереги для детей и дома</li>
-<li>Инструкции по подзарядке</li>
+                <li>Снятие венца безбрачия (если он действительно есть)</li>
+<li>Работа с блоками, мешающими встретить достойного человека</li>
+<li>Обряды на привлечение любви и брака</li>
+<li>Помощь в укреплении новых отношений</li>
+<li>Сопровождение до момента, когда вы почувствуете себя счастливой</li>
                 </ul>
                 </div>
         </div>
@@ -381,8 +332,8 @@ footer{background:#0a0814;padding:40px 0;text-align:center;border-top:1px solid 
 <section class="section">
         <div class="container">
         <div class="section-header">
-        <h2>Отзывы клиентов</h2>
-        <p>Истории людей, которым я помогла снять порчу, вернуть любимых и наладить жизнь.</p>
+        <h2>Истории моих клиентов — реальные люди, реальные результаты</h2>
+        <p>Я не прошу оставлять отзывы. Но многие пишут сами — от чистого сердца, когда получают результат. Вот лишь несколько историй.</p>
         </div>
         <div class="slider">
         <button class="slider-arrow prev" onclick="moveSlide(-1)">‹</button>
@@ -527,35 +478,147 @@ footer{background:#0a0814;padding:40px 0;text-align:center;border-top:1px solid 
 <section class="section bg-alt">
         <div class="container">
         <div class="section-header">
-        <h2>Мои гарантии</h2>
-        <p>Работаю, пока вы не почувствуете результат, и всегда держу слово.</p>
+        <h2>Почему мне доверяют даже те, кто раньше не верил в магию</h2>
+        <p>Я знаю — многие боятся обмана. Поэтому работаю честно и открыто. Вот мои принципы, которые я никогда не нарушаю.</p>
         </div>
         <div style="max-width:800px;margin:0 auto">
         <div class="card" style="margin-bottom:20px">
 <div style="display:flex;align-items:flex-start;gap:20px">
-<span style="font-size:2.5rem">🕰️</span>
+<span style="font-size:2.5rem">💬</span>
 <div>
-<h3 style="margin-bottom:10px">Оперативность</h3>
-<p style="margin:0">На связи в течение дня, быстро реагирую на запрос.</p>
+<h3 style="margin-bottom:10px">Честность превыше всего</h3>
+<p style="margin:0">Я никогда не обещаю того, чего не смогу сделать. Если вижу, что ситуация сложная — говорю об этом сразу. Если помочь невозможно — тоже скажу честно и не возьму денег. Моя репутация дороже любого гонорара.</p>
 </div>
 </div>
 </div>
 <div class="card" style="margin-bottom:20px">
 <div style="display:flex;align-items:flex-start;gap:20px">
-<span style="font-size:2.5rem">🧊</span>
+<span style="font-size:2.5rem">📸</span>
 <div>
-<h3 style="margin-bottom:10px">Спокойный тон</h3>
-<p style="margin:0">Говорю по делу и объясняю каждое действие.</p>
+<h3 style="margin-bottom:10px">Полная прозрачность работы</h3>
+<p style="margin:0">После каждого обряда я присылаю фотографии — свечи, расклады, атрибуты. Вы видите, что я действительно работаю. Объясняю, что делаю и почему. Никаких секретов и туманных обещаний.</p>
 </div>
 </div>
 </div>
 <div class="card" style="margin-bottom:20px">
 <div style="display:flex;align-items:flex-start;gap:20px">
-<span style="font-size:2.5rem">📡</span>
+<span style="font-size:2.5rem">🤝</span>
 <div>
-<h3 style="margin-bottom:10px">Живые отчёты</h3>
-<p style="margin:0">После каждого обряда присылаю фото свечей и рекомендации.</p>
+<h3 style="margin-bottom:10px">Я буду рядом до результата</h3>
+<p style="margin:0">Многие целители делают обряд и исчезают. Я так не работаю. Я на связи каждый день. Отвечаю на вопросы, поддерживаю, корректирую план. Вы не останетесь один на один со своей проблемой. Я веду вас до тех пор, пока не получите результат.</p>
 </div>
+</div>
+</div>
+<div class="card" style="margin-bottom:20px">
+<div style="display:flex;align-items:flex-start;gap:20px">
+<span style="font-size:2.5rem">🙏</span>
+<div>
+<h3 style="margin-bottom:10px">Работаю без вреда</h3>
+<p style="margin:0">Я использую только белую магию и мягкие обряды. Никогда не делаю ничего, что может навредить вам или другим людям. Моя бабушка учила меня: "Помогай людям, но не разрушай чужие судьбы". Этого принципа я придерживаюсь всегда.</p>
+</div>
+</div>
+</div>
+        </div>
+        </div>
+        </section>
+
+<section class="section">
+        <div class="container">
+        <div class="section-header">
+        <h2>Как проходит работа — по шагам</h2>
+        <p>Многие боятся неизвестности. Поэтому я всегда рассказываю, как именно будет проходить наша работа. Никаких сюрпризов.</p>
+        </div>
+        <div style="max-width:800px;margin:0 auto">
+        <div class="card" style="margin-bottom:20px">
+<div style="display:flex;align-items:flex-start;gap:20px">
+<span style="font-size:2.5rem;color:#38bdf8;font-weight:800">1</span>
+<div>
+<h3 style="margin-bottom:10px">Вы пишете мне — я слушаю</h3>
+<p style="margin:0">Вы рассказываете свою ситуацию. Я не тороплю, не перебиваю. Задаю уточняющие вопросы, чтобы понять корень проблемы. Если нужны фотографии (ваше или человека) — вы присылаете их.</p>
+</div>
+</div>
+</div>
+<div class="card" style="margin-bottom:20px">
+<div style="display:flex;align-items:flex-start;gap:20px">
+<span style="font-size:2.5rem;color:#38bdf8;font-weight:800">2</span>
+<div>
+<h3 style="margin-bottom:10px">Бесплатная диагностика</h3>
+<p style="margin:0">Я провожу расклад на картах Таро или рунах. Смотрю, в чём истинная причина проблемы. Есть ли порча, влияние со стороны, или это просто жизненные обстоятельства. Присылаю вам фото расклада и подробно объясняю, что вижу.</p>
+</div>
+</div>
+</div>
+<div class="card" style="margin-bottom:20px">
+<div style="display:flex;align-items:flex-start;gap:20px">
+<span style="font-size:2.5rem;color:#38bdf8;font-weight:800">3</span>
+<div>
+<h3 style="margin-bottom:10px">Честный разговор о перспективах</h3>
+<p style="margin:0">Я говорю вам правду: смогу ли помочь, сколько времени это займёт, какие обряды нужны. Если помочь не смогу — скажу прямо и не возьму денег. Если смогу — предлагаю чёткий план действий и называю стоимость.</p>
+</div>
+</div>
+</div>
+<div class="card" style="margin-bottom:20px">
+<div style="display:flex;align-items:flex-start;gap:20px">
+<span style="font-size:2.5rem;color:#38bdf8;font-weight:800">4</span>
+<div>
+<h3 style="margin-bottom:10px">Выполняю обряды — присылаю отчёты</h3>
+<p style="margin:0">После вашего согласия я начинаю работу. Провожу обряды в определённые лунные дни. После каждого ритуала присылаю фотографии (свечи, атрибуты, расклады) и объясняю, что было сделано. Вы видите процесс своими глазами.</p>
+</div>
+</div>
+</div>
+<div class="card" style="margin-bottom:20px">
+<div style="display:flex;align-items:flex-start;gap:20px">
+<span style="font-size:2.5rem;color:#38bdf8;font-weight:800">5</span>
+<div>
+<h3 style="margin-bottom:10px">Даю рекомендации и веду до результата</h3>
+<p style="margin:0">Обряд — это только часть работы. Важно, как вы будете себя вести дальше. Я даю конкретные советы: когда писать любимому человеку, что говорить, чего избегать. Я на связи каждый день. Отвечаю на вопросы, поддерживаю, корректирую план. Веду вас до тех пор, пока не получите результат.</p>
+</div>
+</div>
+</div>
+        </div>
+        </div>
+        </section>
+
+<section class="section bg-alt">
+        <div class="container">
+        <div class="section-header">
+        <h2>Вопросы, которые мне часто задают</h2>
+        <p>Я понимаю ваши сомнения. Вот честные ответы на самые частые вопросы.</p>
+        </div>
+        <div style="max-width:800px;margin:0 auto">
+        <div class="card" style="margin-bottom:20px">
+<div>
+<h3 style="margin-bottom:10px;color:#38bdf8">❓ А вдруг это обман? Как я узнаю, что вы реально работаете?</h3>
+<p style="margin:0">Я понимаю этот страх — в интернете много мошенников. Поэтому: 1) Первая диагностика у меня бесплатная. Вы ничего не платите, пока не увидите расклад и не услышите мой прогноз. 2) После каждого обряда я присылаю фото — свечи, расклады, атрибуты. Вы видите процесс. 3) Я даю свой реальный номер телефона, вы можете позвонить и услышать мой голос. 4) У меня есть реальный офис в Москве, куда можно приехать лично.</p>
+</div>
+</div>
+<div class="card" style="margin-bottom:20px">
+<div>
+<h3 style="margin-bottom:10px;color:#38bdf8">❓ Сколько это стоит? Я боюсь, что не смогу заплатить</h3>
+<p style="margin:0">Стоимость зависит от ситуации. Простая диагностика и один обряд — от 5000 рублей. Сложная работа (снятие родовой порчи, возврат в браке с детьми) — от 15000 рублей. Я всегда называю цену заранее и не прошу доплат в процессе. Если вам тяжело оплатить сразу — я могу пойти навстречу и разделить платёж на части. Главное для меня — помочь вам.</p>
+</div>
+</div>
+<div class="card" style="margin-bottom:20px">
+<div>
+<h3 style="margin-bottom:10px;color:#38bdf8">❓ Как быстро будет результат?</h3>
+<p style="margin:0">Я не обещаю мгновенных чудес. Каждая ситуация индивидуальна. Лёгкие случаи (остывшие чувства без вмешательства извне) — 1-3 недели. Сложные случаи (сильная порча, разлука, соперница, развод) — 1-3 месяца. Но я честно говорю сроки после диагностики. И главное — я буду рядом весь этот период, поддерживая вас каждый день.</p>
+</div>
+</div>
+<div class="card" style="margin-bottom:20px">
+<div>
+<h3 style="margin-bottom:10px;color:#38bdf8">❓ А это не навредит? Я боюсь чёрной магии</h3>
+<p style="margin:0">Я работаю ТОЛЬКО белой магией. Моя бабушка учила: "Никогда не делай зла, даже во благо". Я использую мягкие обряды, которые не причиняют вреда никому. Я не делаю привороты на крови, не использую кладбищенскую землю, не призываю тёмных сущностей. Всё, что я делаю — это работа со свечами, травами, молитвами, картами. Это безопасно.</p>
+</div>
+</div>
+<div class="card" style="margin-bottom:20px">
+<div>
+<h3 style="margin-bottom:10px;color:#38bdf8">❓ А если не поможет? Вы вернёте деньги?</h3>
+<p style="margin:0">Я беру оплату только тогда, когда уверена, что смогу помочь. Если после диагностики вижу, что ситуация безнадёжная или мне не под силу — говорю об этом честно и не беру денег. Но если я взялась за работу — я доведу её до конца. Я не бросаю людей на полпути. Если результат не приходит в обещанный срок — я продолжаю работать бесплатно, пока не получите то, за что заплатили.</p>
+</div>
+</div>
+<div class="card" style="margin-bottom:20px">
+<div>
+<h3 style="margin-bottom:10px;color:#38bdf8">❓ Можно ли работать дистанционно? Я живу в другом городе</h3>
+<p style="margin:0">Да, конечно! Большинство моих клиентов — из разных городов России и даже из-за рубежа. Магия не знает расстояний. Мне нужны только ваши фото и фото человека (если работаем с отношениями). Всё общение идёт через WhatsApp или Telegram. Я присылаю фотоотчёты, мы созваниваемся голосом или видео. Эффективность такая же, как при личной встрече.</p>
 </div>
 </div>
         </div>
@@ -565,15 +628,11 @@ footer{background:#0a0814;padding:40px 0;text-align:center;border-top:1px solid 
 <section id="cta" class="cta-section">
 <div class="container">
 <div class="cta-box">
-<h2 data-single-text="Нужна помощь? Напишите в WhatsApp">Нужна помощь? Напишите в удобный мессенджер</h2>
-<p style="font-size:1.2rem;color:#e6f6ff" data-single-text="Опишите вашу ситуацию — проведу диагностику и подскажу решение в WhatsApp.">Опишите вашу ситуацию — проведу диагностику и подскажу решение в WhatsApp или Telegram.</p>
+<h2>Если вы сейчас в отчаянии — напишите мне</h2>
+<p style="font-size:1.2rem;color:#e6f6ff">Я понимаю, как страшно и больно, когда рушится личная жизнь. Не оставайтесь один на один с проблемой. Напишите мне прямо сейчас — я выслушаю вас, проведу бесплатную экспресс-диагностику и честно скажу, смогу ли помочь. Если смогу — мы начнём работу сегодня же.</p>
 <div class="cta-buttons">
-<a href="https://wa.me/79604485578" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">💬 Написать в WhatsApp</a>
-<a href="https://t.me/anna_more_magic" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Написать в Telegram</a>
-</div>
-<p style="margin-top:15px;color:#9cb7d1" data-single-text="🕑 Средний ответ — 3 минуты • работаю ежедневно 09:00-22:00 в WhatsApp.">🕑 Средний ответ — 3 минуты • одинаково быстро отвечаю в обоих мессенджерах.</p>
-<div class="urgency">
-<strong>⏳ Свободно 5 мест на диагностику сегодня</strong>
+<a href="#" class="btn btn-wa" data-messenger="wa">Написать в WhatsApp</a>
+<a href="#" class="btn btn-tg" data-messenger="tg">Написать в Telegram</a>
 </div>
 </div>
 </div>
@@ -582,7 +641,7 @@ footer{background:#0a0814;padding:40px 0;text-align:center;border-top:1px solid 
 <footer>
 <div class="container">
 <div style="font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#bfeeff,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:15px" id="footerName"></div>
-<p style="color:#9cb7d1;max-width:600px;margin:0 auto 20px">Практикующий маг. Снимаю порчу, сглаз, делаю привороты, возвращаю любимых. Консультации в WhatsApp.</p>
+<p style="color:#9cb7d1;max-width:600px;margin:0 auto 20px">Анна Ивановна — потомственная целительница с 12-летним опытом. Помогаю вернуть любовь, восстановить семью, снять порчу. Работаю лично, честно и до результата. Вы не останетесь один на один со своей проблемой — я буду рядом на каждом шаге.</p>
 <p style="margin-bottom:15px"><a href="#" onclick="openPrivacyModal();return false" style="color:#38bdf8;text-decoration:none;font-size:0.9rem;transition:color 0.3s;cursor:pointer" onmouseover="this.style.color='#bfeeff'" onmouseout="this.style.color='#38bdf8'">🧾 Политика конфиденциальности</a></p>
 <p style="color:rgba(255,255,255,0.3);font-size:0.85rem">© 2025 Все права защищены</p>
 </div>
